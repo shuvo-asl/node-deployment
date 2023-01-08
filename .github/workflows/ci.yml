@@ -1,29 +1,10 @@
-name: Deploy
- 
+name: "Node Integration"
 on: [push]
- 
 jobs:
   build:
- 
     runs-on: ubuntu-latest
- 
-    steps:
-    - uses: actions/checkout@v1
- 
-    - name: Copy repository contents via scp
-      uses: appleboy/scp-action@master
-      env:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
-      with:
-        source: "."
-        target: "/usr/share/nginx/html/devops_shuvo/react-exp/"
- 
-    - name: Executing remote command
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
-        script: ls
+    steps: 
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: npm install
+      - run: npm test
