@@ -1,7 +1,7 @@
 name: "Node Integration"
 on: [push]
 jobs:
-  build:
+  node-application-test:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v3
