@@ -1,0 +1,10 @@
+name: "Node Integration"
+on: [push]
+jobs:
+  node-application-test:
+    runs-on: ubuntu-lates
+    steps: 
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: npm install
+      - run: npm test
