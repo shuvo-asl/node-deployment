@@ -1,5 +1,5 @@
 const server = require('./server');
-const port = 8000
+const port = 3000
 server.listen(port,()=>{
     console.log(`Example app listening on port ${port}`)
 })
