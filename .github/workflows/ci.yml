@@ -1,5 +1,11 @@
 name: "Node Integration"
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
   node-application-test:
     runs-on: ubuntu-latest
