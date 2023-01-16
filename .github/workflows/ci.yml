@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        token: "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"
+        token: "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"
 
     # Build steps
     - uses: actions/setup-node@v3
