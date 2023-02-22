@@ -25,8 +25,8 @@ jobs:
         key: ${{ secrets.CONTABO_PRIVATE_KEY }}
         port: 22
         script: |
-          cd ~/home/danielwetan/apps/node1
-          git pull origin master
+          cd ~/usr/share/nginx/html/
+          git pull origin main
           git status
-          npm install --only=prod
-          pm2 restart node1
+          npm install
+          npm start
