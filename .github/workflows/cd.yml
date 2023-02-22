@@ -1,4 +1,4 @@
-name: "Node Integration"
+name: "Node Deployment"
 on:
   push:
     branches:
