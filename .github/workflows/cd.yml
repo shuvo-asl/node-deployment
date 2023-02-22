@@ -1,39 +1,32 @@
-name: deploy
+name: "Node Integration"
 on:
   push:
     branches:
       - main
 jobs:
-  build-and-deploy:
+  node-application-test:
     runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: npm install
+      - run: npm test
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.CONTABO_PRIVATE_KEY }}
-          known_hosts: unnecessary
-
-      - name: Adding Known Hosts
-        run: ssh-keyscan -p ${{ secrets.CONTABO_PORT}} -H ${{ secrets.CONTABO_HOST }}  >> ~/.ssh/known_hosts
-
-      - name: Deploy with rsync
-        run: rsync -avz -e "ssh -p ${{ secrets.CONTABO_PORT }}" ./dist/ ${{ secrets.CONTABO_USERNAME }}@${{ secrets.CONTABO_HOST }}:/usr/share/nginx/html/node-deployment/
-
-      - name: Restart Node Server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.CONTABO_HOST }}
-          username: ${{ secrets.CONTABO_USERNAME }}
-          key: ${{ secrets.CONTABO_PRIVATE_KEY }}
-          port: ${{ secrets.CONTABO_PORT }}
-          script: |
-            cd /usr/share/nginx/html/node-deployment/
-            git fetch origin main
-            git reset --hard FETCH_HEAD
-            git clean -d -f --exclude secrets
-            npm install --production
-            chown $(whoami) . # PM2 doesn't recognize root user from Github Actions
-            npm start
+    - name: Deploy using ssh
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.CONTABO_HOST }}
+        username: ${{ secrets.CONTABO_USERNAME }}
+        key: ${{ secrets.CONTABO_PRIVATE_KEY }}
+        port: 22
+        script: |
+          cd ~/usr/share/nginx/html/node-deployment
+          git pull origin master
+          git status
+          npm install
+          npm start
