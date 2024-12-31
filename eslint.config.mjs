@@ -8,7 +8,7 @@ export default [
     languageOptions: {
       ecmaVersion: 12,
       sourceType: "module",
-      globals: { ...globals.browser, ...globals.node }, // Include both browser and Node.js globals
+      globals: { ...globals.browser, ...globals.node,...globals.jest }, // Include both browser and Node.js globals
     },
     rules: {
       indent: ["error", 2],
