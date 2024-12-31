@@ -1,0 +1,24 @@
+name: ESLint check
+on:
+  push:
+    branches:
+      - develop  
+  pull_request:
+    branches:
+      - main
+jobs:
+    eslin-check:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+            
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                node-version: '23.5.0'
+            - name: Install depecndencies
+              run: npm install
+            
+            - name: Run ESLint
+              run: npx eslint .
