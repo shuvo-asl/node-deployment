@@ -29,4 +29,6 @@ jobs:
       - name: Setup SonarQube
         uses: SonarSource/sonarcloud-github-action@v1
         with:
-          sonar-token: ${{ secrets.SONAR_TOKEN }}
+          projectBaseDir: .
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
