@@ -37,9 +37,9 @@ jobs:
       
       - name: Verify Java Version
         run: java -version  
-      - name: Setup SonarQube
-        uses: SonarSource/sonarcloud-github-action@v1
-        with:
-          projectBaseDir: .
+      - name: Run SonarScanner
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          npm install -g sonar-scanner
+          sonar-scanner
