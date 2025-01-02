@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'
-          distribution: 'adoptopenjdk'
+          distribution: 'adoptium'
       - name: Setup SonarQube
         uses: SonarSource/sonarcloud-github-action@v1
         with:
