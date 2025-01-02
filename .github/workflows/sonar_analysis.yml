@@ -25,11 +25,6 @@ jobs:
 
       - name: Run tests with coverage
         run: npm test  # Ensure this generates coverage data
-      
-      - name: Run SonarScanner with Correct Java
-        run: |
-          export PATH="/path/to/correct/java/bin:$PATH"
-          sonar-scanner
      
       - name: Setup Java 21 (Temurin)
         uses: actions/setup-java@v4
