@@ -1,4 +1,4 @@
-name: Sonar Analysis
+name: SonarQube Analysis
 
 on:
   push:
@@ -11,6 +11,7 @@ on:
 jobs:
   sonar-analysis:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -18,28 +19,27 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '23.5.0'
+          node-version: '16'  # Use a stable Node.js version
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests with coverage
-        run: npm test  # Ensure this generates coverage data
-     
-      - name: Setup Java 21 (Temurin)
-        uses: actions/setup-java@v4
+      - name: Run tests and generate coverage
+        run: |
+          npm test -- --coverage
+          # Ensure coverage data is generated in coverage/lcov.info
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: '21'  # Use Java 21 (latest LTS or stable version)
-        
-      - name: Set JAVA_HOME
-        run: echo "JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))" >> $GITHUB_ENV
-      
-      - name: Verify Java Version
-        run: java -version  
+          java-version: '21'
+
       - name: Run SonarScanner
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          npm install -g sonar-scanner
-          sonar-scanner
+          sonar-scanner \
+            -Dsonar.projectKey=shuvo-asl_node-deployment \
+            -Dsonar.branch.name=develop \
+            -Dsonar.host.url=https://sonarcloud.io  # Change to your SonarQube URL
