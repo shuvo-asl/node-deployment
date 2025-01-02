@@ -1,11 +1,13 @@
 const express = require("express");
-const app = express();
-app.get("/",(req,res)=>{
+
+const server_obj = express();
+
+server_obj.get("/",(req,res)=>{
   res.send("Hello World!");
 });
 
-app.get("/about",(req,res)=>{
+server_obj.get("/about",(req,res)=>{
   res.send("We are ASL Deployment Team");
 });
 
-module.exports = app;
+module.exports = server_obj;

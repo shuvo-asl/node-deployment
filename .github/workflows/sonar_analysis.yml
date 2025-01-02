@@ -1,0 +1,32 @@
+name: Sonar Analysis
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  sonar-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '23.5.0'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests with coverage
+        run: npm test  # Ensure this generates coverage data
+
+      - name: Setup SonarQube
+        uses: SonarSource/sonarcloud-github-action@v1
+        with:
+          sonar-token: ${{ secrets.SONAR_TOKEN }}
