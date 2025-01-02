@@ -25,13 +25,23 @@ jobs:
 
       - name: Run tests with coverage
         run: npm test  # Ensure this generates coverage data
-        
+      
+      - name: Run SonarScanner with Correct Java
+        run: |
+          export PATH="/path/to/correct/java/bin:$PATH"
+          sonar-scanner
+     
       - name: Setup Java 21 (Temurin)
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'  # Use Java 21 (latest LTS or stable version)
+        
+      - name: Set JAVA_HOME
+        run: echo "JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))" >> $GITHUB_ENV
       
+      - name: Verify Java Version
+        run: java -version  
       - name: Setup SonarQube
         uses: SonarSource/sonarcloud-github-action@v1
         with:
