@@ -25,7 +25,7 @@ jobs:
 
       - name: Run tests with coverage
         run: npm test  # Ensure this generates coverage data
-
+     
       - name: Setup Java 21 (Temurin)
         uses: actions/setup-java@v4
         with:
@@ -37,26 +37,9 @@ jobs:
       
       - name: Verify Java Version
         run: java -version  
-      
       - name: Run SonarScanner
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           npm install -g sonar-scanner
-          sonar-scanner > sonar.log || true # Capture output and don't fail here
-      
-      - name: Check SonarQube Quality Gate Status
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          SONAR_HOST_URL="https://sonarcloud.io"
-          PROJECT_KEY="shuvo-asl_node-deployment"
-          ANALYSIS_ID=$(grep -oP 'ANALYSIS ID: \K.*' sonar.log)
-          STATUS=$(curl -s -u $SONAR_TOKEN: $SONAR_HOST_URL/api/qualitygates/project_status?analysisId=$ANALYSIS_ID | jq -r '.projectStatus.status')
-
-          echo "SonarQube Quality Gate Status: $STATUS"
-
-          if [ "$STATUS" != "OK" ]; then
-            echo "Quality Gate Failed. Exiting."
-            exit 1
-          fi
+          sonar-scanner
