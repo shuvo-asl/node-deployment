@@ -49,8 +49,8 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          SONAR_HOST_URL="https://your-sonarqube-server-url"
-          PROJECT_KEY="your_project_key"
+          SONAR_HOST_URL="https://sonarcloud.io"
+          PROJECT_KEY="shuvo-asl_node-deployment"
           ANALYSIS_ID=$(grep -oP 'ANALYSIS ID: \K.*' sonar.log)
           STATUS=$(curl -s -u $SONAR_TOKEN: $SONAR_HOST_URL/api/qualitygates/project_status?analysisId=$ANALYSIS_ID | jq -r '.projectStatus.status')
 

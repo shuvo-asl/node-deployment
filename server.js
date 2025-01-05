@@ -1,12 +1,10 @@
-const app = require("express");
+const express = require("express");
 
-const server_obj = app();
+const server_obj = express();
 
-server_obj.get("/", 
-  (req,res)=>{
-                    res.send("Hello World!");
-}
-);
+server_obj.get("/",(req,res)=>{
+  res.send("Hello World!");
+});
 
 server_obj.get("/about",(req,res)=>{
   res.send("We are ASL Deployment Team");
