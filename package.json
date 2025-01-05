@@ -35,7 +35,7 @@
       "/node_modules/"
     ],
     "collectCoverage": true,
-    "coverageReporters": ["lcov", "text"],
+    "coverageReporters": ["lcov"],
     "coverageDirectory": "coverage"
   }
 }
