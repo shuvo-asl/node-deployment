@@ -1,0 +1,313 @@
+INFO: Scanner configuration file: /Users/asl_systems/.nvm/versions/node/v14.19.3/lib/node_modules/sonar-scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: /Users/asl_systems/Workspace/node-deployment/sonar-project.properties
+INFO: SonarQube Scanner 3.1.0.1141
+INFO: Java 23.0.1 Homebrew (64-bit)
+INFO: Mac OS X 15.1.1 x86_64
+INFO: User cache: /Users/asl_systems/.sonar/cache
+INFO: SonarQube server 11.4.1.277
+INFO: Default locale: "en_US", source code encoding: "UTF-8"
+INFO: Load global settings
+INFO: Load global settings (done) | time=495ms
+INFO: Server id: 1BD809FA-AWHW8ct9-T_TB3XqouNu
+INFO: Loading required plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=610ms
+INFO: Load/download plugins
+INFO: Load/download plugins (done) | time=61ms
+INFO: Load project settings for component key: 'shuvo-asl_node-deployment'
+INFO: Load project settings for component key: 'shuvo-asl_node-deployment' (done) | time=254ms
+INFO: Process project properties
+INFO: Project key: shuvo-asl_node-deployment
+INFO: Base dir: /Users/asl_systems/Workspace/node-deployment
+INFO: Working dir: /Users/asl_systems/Workspace/node-deployment/.scannerwork
+INFO: Load project branches
+INFO: Load project branches (done) | time=312ms
+INFO: Check ALM binding of project 'shuvo-asl_node-deployment'
+INFO: Detected project binding: BOUND
+INFO: Check ALM binding of project 'shuvo-asl_node-deployment' (done) | time=242ms
+INFO: Load project pull requests
+INFO: Load project pull requests (done) | time=559ms
+INFO: Load branch configuration
+INFO: Load branch configuration (done) | time=1ms
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=660ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=20379ms
+INFO: Organization key: shuvo-asl
+INFO: Branch name: develop, type: short-lived
+INFO: Preprocessing files...
+INFO: 5 languages detected in 22 preprocessed files
+INFO: 1 file ignored because of inclusion/exclusion patterns
+INFO: 5856 files ignored because of scm ignore settings
+INFO: Loading plugins for detected languages
+INFO: Load/download plugins
+INFO: Load/download plugins (done) | time=28ms
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=578ms
+INFO: SCM collecting changed files in the branch
+INFO: SCM collecting changed files in the branch (done) | time=64ms
+INFO: Indexing files...
+INFO: Project configuration:
+INFO:   Excluded sources: **/build-wrapper-dump.json, **/build-wrapper-dump.json, __tests__/**/*.js
+INFO:   Included tests: __tests__/**/*.js
+INFO: 20 files indexed
+INFO: Quality profile for css: Sonar way
+INFO: Quality profile for js: Sonar way
+INFO: Quality profile for json: Sonar way
+INFO: Quality profile for web: Sonar way
+INFO: Quality profile for xml: Sonar way
+INFO: ------------- Run sensors on module shuvo-asl_node-deployment
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=558ms
+INFO: Sensor cache enabled
+INFO: Load sensor cache
+INFO: Load sensor cache (23 KB) | time=2814ms
+INFO: Sensor HTML [web]
+INFO: Sensor HTML [web] (done) | time=158ms
+INFO: Sensor XML Sensor [xml]
+INFO: 1 source file to be analyzed
+INFO: 1/1 source file has been analyzed
+INFO: Sensor XML Sensor [xml] (done) | time=156ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=2ms
+INFO: Sensor IaC CloudFormation Sensor [iac]
+INFO: 0 source files to be analyzed
+INFO: 0/0 source files have been analyzed
+INFO: Sensor IaC CloudFormation Sensor [iac] (done) | time=27ms
+INFO: Sensor IaC AzureResourceManager Sensor [iac]
+INFO: 0 source files to be analyzed
+INFO: 0/0 source files have been analyzed
+INFO: Sensor IaC AzureResourceManager Sensor [iac] (done) | time=78ms
+INFO: Sensor Java Config Sensor [iac]
+INFO: 0 source files to be analyzed
+INFO: 0/0 source files have been analyzed
+INFO: Sensor Java Config Sensor [iac] (done) | time=10ms
+INFO: Sensor JavaScript/TypeScript analysis [javascript]
+INFO: Detected os: Mac OS X arch: x86_64 alpine: false. Platform: UNSUPPORTED
+INFO: Using Node.js executable: '/Users/asl_systems/Workspace/node-deployment/.scannerwork/.sonartmp/bridge-bundle/package/bin/run-node'.
+INFO: Memory configuration: OS (24576 MB), Node.js (4144 MB).
+INFO: Found 0 tsconfig.json file(s): []
+INFO: Creating TypeScript program
+INFO: 6 source files to be analyzed
+INFO: TypeScript configuration file /var/folders/m0/mytdc22x5n553ytg2ykxy04r0000gn/T/tmp-32020-vYa1Oc6SFRdE
+INFO: Starting analysis with current program
+INFO: Analyzed 6 file(s) with current program
+INFO: 6/6 source files have been analyzed
+INFO: Hit the cache for 0 out of 6
+INFO: Miss the cache for 6 out of 6: ANALYSIS_MODE_INELIGIBLE [6/6]
+INFO: Sensor JavaScript/TypeScript analysis [javascript] (done) | time=4951ms
+INFO: Sensor JavaScript inside HTML analysis [javascript]
+INFO: 2 source files to be analyzed
+INFO: 2/2 source files have been analyzed
+INFO: Hit the cache for 0 out of 2
+INFO: Miss the cache for 2 out of 2: ANALYSIS_MODE_INELIGIBLE [2/2]
+INFO: Sensor JavaScript inside HTML analysis [javascript] (done) | time=42ms
+INFO: Sensor CSS Rules [javascript]
+INFO: 3 source files to be analyzed
+INFO: 3/3 source files have been analyzed
+INFO: Hit the cache for 0 out of 0
+INFO: Miss the cache for 0 out of 0
+INFO: Sensor CSS Rules [javascript] (done) | time=237ms
+INFO: Sensor JavaScript/TypeScript Coverage [javascript]
+INFO: No LCOV files were found using coverage/lcov-report/index-lcov-report.json
+INFO: Sensor JavaScript/TypeScript Coverage [javascript] (done) | time=112ms
+INFO: Sensor CSS Metrics [javascript]
+INFO: Sensor CSS Metrics [javascript] (done) | time=22ms
+INFO: Sensor IaC Docker Sensor [iac]
+INFO: 0 source files to be analyzed
+INFO: 0/0 source files have been analyzed
+INFO: Sensor IaC Docker Sensor [iac] (done) | time=40ms
+INFO: Sensor Serverless configuration file sensor [security]
+INFO: 0 Serverless function entries were found in the project
+INFO: 0 Serverless function handlers were kept as entrypoints
+INFO: Sensor Serverless configuration file sensor [security] (done) | time=3ms
+INFO: Sensor AWS SAM template file sensor [security]
+INFO: Sensor AWS SAM template file sensor [security] (done) | time=0ms
+INFO: Sensor AWS SAM Inline template file sensor [security]
+INFO: Sensor AWS SAM Inline template file sensor [security] (done) | time=0ms
+INFO: Sensor EnterpriseTextAndSecretsSensor [textenterprise]
+INFO: Available processors: 12
+INFO: Using 12 threads for analysis.
+INFO: Using git CLI to retrieve untracked files
+INFO: Analyzing language associated files and files included via "sonar.text.inclusions" that are tracked by git
+INFO: 14 source files to be analyzed
+INFO: 14/14 source files have been analyzed
+INFO: Sensor EnterpriseTextAndSecretsSensor [textenterprise] (done) | time=1019ms
+INFO: Sensor JavaSecuritySensor [security]
+INFO: Enabled taint analysis rules: S2076, S2078, S2083, S2091, S2631, S3649, S5131, S5135, S5144, S5145, S5146, S5147, S5334, S5496, S5883, S6096, S6173, S6287, S6350, S6384, S6390, S6398, S6399, S6547, S6549, S7044
+INFO: Load type hierarchy and UCFGs: Starting
+INFO: Load type hierarchy: Starting
+INFO: Reading type hierarchy from: /Users/asl_systems/Workspace/node-deployment/.scannerwork/ucfg2/java
+INFO: Read 0 type definitions
+INFO: Load type hierarchy: Time spent was 00:00:00.002
+INFO: Load UCFGs: Starting
+INFO: Load UCFGs: Time spent was 00:00:00.000
+INFO: Load type hierarchy and UCFGs: Time spent was 00:00:00.002
+INFO: No UCFGs have been included for analysis.
+INFO: java security sensor: Time spent was 00:00:00.028
+INFO: java security sensor: Begin: 2025-01-05T07:34:26.262075Z, End: 2025-01-05T07:34:26.290349Z, Duration: 00:00:00.028
+  Load type hierarchy and UCFGs: Begin: 2025-01-05T07:34:26.266624Z, End: 2025-01-05T07:34:26.269366Z, Duration: 00:00:00.002
+    Load type hierarchy: Begin: 2025-01-05T07:34:26.266691Z, End: 2025-01-05T07:34:26.268852Z, Duration: 00:00:00.002
+    Load UCFGs: Begin: 2025-01-05T07:34:26.269104Z, End: 2025-01-05T07:34:26.269164Z, Duration: 00:00:00.000
+INFO: java security sensor peak memory: 87 MB
+INFO: Sensor JavaSecuritySensor [security] (done) | time=32ms
+INFO: Sensor CSharpSecuritySensor [security]
+INFO: Enabled taint analysis rules: S2076, S2078, S2083, S2091, S2631, S3649, S5131, S5135, S5144, S5145, S5146, S5147, S5334, S5883, S6096, S6173, S6287, S6350, S6399, S6547, S6549, S6639, S6641, S6680, S6776, S7044
+INFO: Load type hierarchy and UCFGs: Starting
+INFO: Load type hierarchy: Starting
+INFO: Reading type hierarchy from: /Users/asl_systems/Workspace/node-deployment/ucfg2/cs
+INFO: Read 0 type definitions
+INFO: Load type hierarchy: Time spent was 00:00:00.000
+INFO: Load UCFGs: Starting
+INFO: Load UCFGs: Time spent was 00:00:00.000
+INFO: Load type hierarchy and UCFGs: Time spent was 00:00:00.000
+INFO: No UCFGs have been included for analysis.
+INFO: csharp security sensor: Time spent was 00:00:00.000
+INFO: csharp security sensor: Begin: 2025-01-05T07:34:26.291395Z, End: 2025-01-05T07:34:26.292253Z, Duration: 00:00:00.000
+  Load type hierarchy and UCFGs: Begin: 2025-01-05T07:34:26.291658Z, End: 2025-01-05T07:34:26.292021Z, Duration: 00:00:00.000
+    Load type hierarchy: Begin: 2025-01-05T07:34:26.291681Z, End: 2025-01-05T07:34:26.291829Z, Duration: 00:00:00.000
+    Load UCFGs: Begin: 2025-01-05T07:34:26.291923Z, End: 2025-01-05T07:34:26.291965Z, Duration: 00:00:00.000
+INFO: csharp security sensor peak memory: 87 MB
+INFO: Sensor CSharpSecuritySensor [security] (done) | time=1ms
+INFO: Sensor PhpSecuritySensor [security]
+INFO: Enabled taint analysis rules: S2076, S2078, S2083, S2091, S2631, S3649, S5131, S5135, S5144, S5145, S5146, S5334, S5335, S5883, S6173, S6287, S6350, S7044
+INFO: Load type hierarchy and UCFGs: Starting
+INFO: Load type hierarchy: Starting
+INFO: Reading type hierarchy from: /Users/asl_systems/Workspace/node-deployment/.scannerwork/ucfg2/php
+INFO: Read 0 type definitions
+INFO: Load type hierarchy: Time spent was 00:00:00.000
+INFO: Load UCFGs: Starting
+INFO: Load UCFGs: Time spent was 00:00:00.000
+INFO: Load type hierarchy and UCFGs: Time spent was 00:00:00.000
+INFO: No UCFGs have been included for analysis.
+INFO: php security sensor: Time spent was 00:00:00.000
+INFO: php security sensor: Begin: 2025-01-05T07:34:26.292729Z, End: 2025-01-05T07:34:26.293453Z, Duration: 00:00:00.000
+  Load type hierarchy and UCFGs: Begin: 2025-01-05T07:34:26.292960Z, End: 2025-01-05T07:34:26.293277Z, Duration: 00:00:00.000
+    Load type hierarchy: Begin: 2025-01-05T07:34:26.292995Z, End: 2025-01-05T07:34:26.293099Z, Duration: 00:00:00.000
+    Load UCFGs: Begin: 2025-01-05T07:34:26.293188Z, End: 2025-01-05T07:34:26.293218Z, Duration: 00:00:00.000
+INFO: php security sensor peak memory: 87 MB
+INFO: Sensor PhpSecuritySensor [security] (done) | time=1ms
+INFO: Sensor PythonSecuritySensor [security]
+INFO: Enabled taint analysis rules: S2076, S2078, S2083, S2091, S2631, S3649, S5131, S5135, S5144, S5145, S5146, S5147, S5334, S5496, S6287, S6350, S6639, S6680, S6776, S6839, S7044
+INFO: Load type hierarchy and UCFGs: Starting
+INFO: Load type hierarchy: Starting
+INFO: Reading type hierarchy from: /Users/asl_systems/Workspace/node-deployment/.scannerwork/ucfg2/python
+INFO: Read 0 type definitions
+INFO: Load type hierarchy: Time spent was 00:00:00.000
+INFO: Load UCFGs: Starting
+INFO: Load UCFGs: Time spent was 00:00:00.000
+INFO: Load type hierarchy and UCFGs: Time spent was 00:00:00.000
+INFO: No UCFGs have been included for analysis.
+INFO: python security sensor: Time spent was 00:00:00.000
+INFO: python security sensor: Begin: 2025-01-05T07:34:26.294016Z, End: 2025-01-05T07:34:26.294608Z, Duration: 00:00:00.000
+  Load type hierarchy and UCFGs: Begin: 2025-01-05T07:34:26.294151Z, End: 2025-01-05T07:34:26.294424Z, Duration: 00:00:00.000
+    Load type hierarchy: Begin: 2025-01-05T07:34:26.294174Z, End: 2025-01-05T07:34:26.294273Z, Duration: 00:00:00.000
+    Load UCFGs: Begin: 2025-01-05T07:34:26.294340Z, End: 2025-01-05T07:34:26.294371Z, Duration: 00:00:00.000
+INFO: python security sensor peak memory: 87 MB
+INFO: Sensor PythonSecuritySensor [security] (done) | time=1ms
+INFO: Sensor JsSecuritySensor [security]
+INFO: Enabled taint analysis rules: S2076, S2083, S2631, S3649, S5131, S5144, S5146, S5147, S5334, S5696, S5883, S6096, S6105, S6287, S6350
+INFO: Load type hierarchy and UCFGs: Starting
+INFO: Load type hierarchy: Starting
+INFO: Reading type hierarchy from: /Users/asl_systems/Workspace/node-deployment/.scannerwork/ucfg2/js
+INFO: Read 0 type definitions
+INFO: Load type hierarchy: Time spent was 00:00:00.000
+INFO: Load UCFGs: Starting
+INFO: Reading UCFGs from: /Users/asl_systems/Workspace/node-deployment/.scannerwork/ucfg2/js
+INFO: Load UCFGs: Time spent was 00:00:00.114
+INFO: Load type hierarchy and UCFGs: Time spent was 00:00:00.115
+INFO: Analyzing 33 UCFGs to detect vulnerabilities.
+INFO: Check cache: Starting
+INFO: Load cache: Starting
+INFO: Load cache: Time spent was 00:00:00.000
+INFO: Check cache: Time spent was 00:00:00.000
+INFO: Create runtime call graph: Starting
+INFO: Variable Type Analysis #1: Starting
+INFO: Create runtime type propagation graph: Starting
+INFO: Create runtime type propagation graph: Time spent was 00:00:00.014
+INFO: Run SCC (Tarjan) on 212 nodes: Starting
+INFO: Run SCC (Tarjan) on 212 nodes: Time spent was 00:00:00.001
+INFO: Tarjan found 212 strongly connected components
+INFO: Propagate runtime types to strongly connected components: Starting
+INFO: Propagate runtime types to strongly connected components: Time spent was 00:00:00.001
+INFO: Variable Type Analysis #1: Time spent was 00:00:00.018
+INFO: Variable Type Analysis #2: Starting
+INFO: Create runtime type propagation graph: Starting
+INFO: Create runtime type propagation graph: Time spent was 00:00:00.003
+INFO: Run SCC (Tarjan) on 212 nodes: Starting
+INFO: Run SCC (Tarjan) on 212 nodes: Time spent was 00:00:00.000
+INFO: Tarjan found 212 strongly connected components
+INFO: Propagate runtime types to strongly connected components: Starting
+INFO: Propagate runtime types to strongly connected components: Time spent was 00:00:00.000
+INFO: Variable Type Analysis #2: Time spent was 00:00:00.004
+INFO: Create runtime call graph: Time spent was 00:00:00.026
+INFO: Load config: Starting
+INFO: Load config: Time spent was 00:00:00.066
+INFO: Compute entry points: Starting
+INFO: Compute entry points: Time spent was 00:00:00.014
+INFO: All rules entry points : 6
+INFO: Slice call graph: Starting
+INFO: Slice call graph: Time spent was 00:00:00.000
+INFO: Live variable analysis: Starting
+INFO: Live variable analysis: Time spent was 00:00:00.013
+INFO: Taint analysis for js: Starting
+INFO: 0 / 33 UCFGs simulated, memory usage: 142 MB
+INFO: 10 / 33 UCFGs simulated, memory usage: 148 MB
+INFO: Taint analysis for js: Time spent was 00:00:00.719
+INFO: Report issues: Starting
+INFO: Report issues: Time spent was 00:00:00.002
+INFO: Store cache: Starting
+INFO: Store cache: Time spent was 00:00:00.001
+INFO: js security sensor: Time spent was 00:00:00.963
+INFO: js security sensor: Begin: 2025-01-05T07:34:26.295083Z, End: 2025-01-05T07:34:27.258942Z, Duration: 00:00:00.963
+  Load type hierarchy and UCFGs: Begin: 2025-01-05T07:34:26.295440Z, End: 2025-01-05T07:34:26.411156Z, Duration: 00:00:00.115
+    Load type hierarchy: Begin: 2025-01-05T07:34:26.295463Z, End: 2025-01-05T07:34:26.296136Z, Duration: 00:00:00.000
+    Load UCFGs: Begin: 2025-01-05T07:34:26.296289Z, End: 2025-01-05T07:34:26.410929Z, Duration: 00:00:00.114
+  Check cache: Begin: 2025-01-05T07:34:26.411265Z, End: 2025-01-05T07:34:26.411580Z, Duration: 00:00:00.000
+    Load cache: Begin: 2025-01-05T07:34:26.411297Z, End: 2025-01-05T07:34:26.411340Z, Duration: 00:00:00.000
+  Create runtime call graph: Begin: 2025-01-05T07:34:26.411652Z, End: 2025-01-05T07:34:26.437770Z, Duration: 00:00:00.026
+    Variable Type Analysis #1: Begin: 2025-01-05T07:34:26.412560Z, End: 2025-01-05T07:34:26.431555Z, Duration: 00:00:00.018
+      Create runtime type propagation graph: Begin: 2025-01-05T07:34:26.413707Z, End: 2025-01-05T07:34:26.427804Z, Duration: 00:00:00.014
+      Run SCC (Tarjan) on 212 nodes: Begin: 2025-01-05T07:34:26.428303Z, End: 2025-01-05T07:34:26.429625Z, Duration: 00:00:00.001
+      Propagate runtime types to strongly connected components: Begin: 2025-01-05T07:34:26.429796Z, End: 2025-01-05T07:34:26.431394Z, Duration: 00:00:00.001
+    Variable Type Analysis #2: Begin: 2025-01-05T07:34:26.432660Z, End: 2025-01-05T07:34:26.437083Z, Duration: 00:00:00.004
+      Create runtime type propagation graph: Begin: 2025-01-05T07:34:26.432710Z, End: 2025-01-05T07:34:26.435847Z, Duration: 00:00:00.003
+      Run SCC (Tarjan) on 212 nodes: Begin: 2025-01-05T07:34:26.436023Z, End: 2025-01-05T07:34:26.436359Z, Duration: 00:00:00.000
+      Propagate runtime types to strongly connected components: Begin: 2025-01-05T07:34:26.436486Z, End: 2025-01-05T07:34:26.436999Z, Duration: 00:00:00.000
+  Load config: Begin: 2025-01-05T07:34:26.437863Z, End: 2025-01-05T07:34:26.504830Z, Duration: 00:00:00.066
+  Compute entry points: Begin: 2025-01-05T07:34:26.504985Z, End: 2025-01-05T07:34:26.519630Z, Duration: 00:00:00.014
+  Slice call graph: Begin: 2025-01-05T07:34:26.519850Z, End: 2025-01-05T07:34:26.519879Z, Duration: 00:00:00.000
+  Live variable analysis: Begin: 2025-01-05T07:34:26.519938Z, End: 2025-01-05T07:34:26.533095Z, Duration: 00:00:00.013
+  Taint analysis for js: Begin: 2025-01-05T07:34:26.533357Z, End: 2025-01-05T07:34:27.253012Z, Duration: 00:00:00.719
+  Report issues: Begin: 2025-01-05T07:34:27.253160Z, End: 2025-01-05T07:34:27.255951Z, Duration: 00:00:00.002
+  Store cache: Begin: 2025-01-05T07:34:27.256839Z, End: 2025-01-05T07:34:27.258267Z, Duration: 00:00:00.001
+INFO: js security sensor peak memory: 151 MB
+INFO: Sensor JsSecuritySensor [security] (done) | time=964ms
+INFO: ------------- Run sensors on project
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=7ms
+INFO: SCM Publisher SCM provider for this project is: git
+INFO: SCM Publisher 11 source files to be analyzed
+INFO: SCM Publisher 11/11 source files have been analyzed (done) | time=277ms
+INFO: CPD Executor 2 files had no CPD blocks
+INFO: CPD Executor Calculating CPD for 5 files
+INFO: CPD Executor CPD calculation finished (done) | time=11ms
+INFO: SCM writing changed lines
+INFO: SCM writing changed lines (done) | time=109ms
+INFO: Analysis report generated in 300ms, dir size=488 KB
+INFO: Analysis report compressed in 53ms, zip size=132 KB
+INFO: Analysis report uploaded in 659ms
+INFO: ANALYSIS SUCCESSFUL, you can find the results at: https://sonarcloud.io/dashboard?id=shuvo-asl_node-deployment&branch=develop&resolved=false
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at https://sonarcloud.io/api/ce/task?id=AZQ1YwIsEhLhAxgJxlfc
+INFO: Sensor cache published successfully
+INFO: Time spent writing ucfgs 19ms
+INFO: Analysis total time: 46.767 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 50.513s
+INFO: Final Memory: 65M/232M
+INFO: ------------------------------------------------------------------------
