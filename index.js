@@ -1,11 +1,24 @@
 const server = require("../index");
-const request = require("supertest");
 
 describe("Server Initialization", () => {
-  it("should start the server without errors", (done) => {
+  it("should start the server and close it without errors", async () => {
     const port = 5000;
-    const testServer = server.listen(port, () => {
-      testServer.close(done); // Cleanly stop the server after the test
+    const testServer = await new Promise((resolve, reject) => {
+      const srv = server.listen(port, (err) => {
+        if (err) reject(err);
+        else resolve(srv);
+      });
+    });
+
+    // Assert server is running (optional)
+    expect(testServer.listening).toBe(true);
+
+    // Close the server
+    await new Promise((resolve, reject) => {
+      testServer.close((err) => {
+        if (err) reject(err);
+        else resolve();
+      });
     });
   });
 });
